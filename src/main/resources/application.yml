@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: jwt-auth-server
+  resources:
+    add-mappings: false
+  mvc:
+    throw-exception-if-no-handler-found: true
+  messages:
+    basename: messages/messages
+    cache-seconds: 1
+    encoding: UTF-8
+server:
+  port: 8080
+logging:
+  config: classpath:logback.xml
+jwt:
+  token:
+    header: Authorization
+    role: USER
+    issuer: iyboklee@gmail.com
+    clientId: iyboklee-jwt-app
+    clientSecret: iyboklee-jwt-secret
+    expirySeconds: 7200
